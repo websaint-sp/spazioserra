@@ -1230,6 +1230,11 @@ h1, h2, h3, h4, h5, h6 {
     display: none;
   }
 
+  .plantas__grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
   .galeria__grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -1251,8 +1256,17 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Mobile (max-width: 768px) */
 @media (max-width: 768px) {
+  :root {
+    --section-padding: 70px;
+  }
+
   .section-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 1rem;
+    margin-bottom: 40px;
   }
 
   .navbar__toggle {
@@ -1277,8 +1291,17 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(0);
   }
 
+  .hero__logo {
+    max-width: 220px;
+  }
+
   .hero__tagline {
-    font-size: 2.8rem;
+    font-size: 1.8rem;
+  }
+
+  .hero__location {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
   }
 
   .sobre {
@@ -1290,6 +1313,39 @@ h1, h2, h3, h4, h5, h6 {
     gap: 40px;
   }
 
+  .plantas {
+    padding: var(--section-padding-mobile) 0;
+  }
+
+  .plantas__tabs {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .plantas__tab-btn {
+    width: 100%;
+    padding: 12px 20px;
+    font-size: 0.85rem;
+    text-align: center;
+  }
+
+  .plantas__grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .planta-card__info {
+    padding: 20px 15px;
+  }
+
+  .planta-card__info h3 {
+    font-size: 1.5rem;
+  }
+
   .localizacao__grid {
     grid-template-columns: 1fr;
   }
@@ -1299,14 +1355,33 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .cta-whatsapp__title {
-    font-size: 2.2rem;
+    font-size: 2rem;
+  }
+
+  .whatsapp-float {
+    bottom: 20px;
+    right: 20px;
+  }
+
+  .whatsapp-float__btn {
+    width: 52px;
+    height: 52px;
+  }
+
+  .whatsapp-float__btn svg {
+    width: 28px;
+    height: 28px;
   }
 }
 
 /* Small Mobile (max-width: 480px) */
 @media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
+
   .hero__tagline {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
   }
 
   .hero__cta {
@@ -1316,10 +1391,12 @@ h1, h2, h3, h4, h5, h6 {
 
   .btn {
     width: 100%;
+    padding: 14px 20px;
   }
 
   .sobre__stats {
     grid-template-columns: 1fr;
+    gap: 25px;
   }
 
   .sobre__stat::after {
@@ -1334,8 +1411,16 @@ h1, h2, h3, h4, h5, h6 {
     grid-template-columns: 1fr;
   }
 
+  .plantas__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .planta-card__image {
+    padding: 10px;
+  }
+
   .lightbox__prev,
   .lightbox__next {
-    display: none; /* Hide arrows on very small screens, rely on swipe if implemented in JS */
+    display: none;
   }
 }
